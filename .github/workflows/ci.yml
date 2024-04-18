@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test-run:
+  build-and-lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,11 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
+
+      - name: Run linting
+        run: npm run lint
 
       - name: Run main script
         run: npm start
