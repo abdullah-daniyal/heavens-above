@@ -6,13 +6,21 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  test-run:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository
+        uses: actions/checkout@v3
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm install
+
+      - name: Run main script
+        run: npm start
