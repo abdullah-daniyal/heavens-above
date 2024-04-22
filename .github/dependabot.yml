@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `package-lock.json` files in the `root` directory
+    directory: "/"
+    # Check the npm registry for updates every day (week, month)
+    schedule:
+      interval: "daily"
+
+  # Add other ecosystems here if needed (like Docker, Maven, NuGet, etc.)
