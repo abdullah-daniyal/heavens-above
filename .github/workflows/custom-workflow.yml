@@ -13,10 +13,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      # Add your custom task commands here
       - name: Run custom workflow task
         run: |
-          chmod +x ../generate-release-notes.sh
-          ../generate-release-notes.sh
-
-      # Add any additional steps or commands as needed
+          chmod +x ./generate-release-notes.sh
+          ./generate-release-notes.sh
