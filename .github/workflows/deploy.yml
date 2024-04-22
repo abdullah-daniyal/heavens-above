@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies (if you have a build process that requires npm)
         run: npm install
 
-      - name: Build (if your site needs a build step, like for React or Vue)
-        run: npm run build
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
