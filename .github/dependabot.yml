@@ -8,4 +8,4 @@ updates:
     schedule:
       interval: "daily"
 
-  # Add other ecosystems here if needed (like Docker, Maven, NuGet, etc.)
+  # Add other ecosystems here if needed (like Docker, Maven, NuGet, etc.).
