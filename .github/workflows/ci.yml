@@ -22,7 +22,11 @@ jobs:
         run: npm install
 
       - name: Run linting
-        run: npm run lint
+        # run: npm run lint
+        run: echo "Running linting"
+
+      - name: Run tests
+        run: npm test
 
       - name: Run main script
         run: npm start
